@@ -1,0 +1,661 @@
+/* Basic reset for styling */
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #FBF7F0;
+  /* Set background color to white */
+  height: 100%;
+  /* Ensure the body takes the full height */
+  overflow-x: hidden;
+  height: 3000px;
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:  5px 10px 5px 10px;
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  width: 100%;
+  color: #9e814e;
+  /* height: 90px; */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+.navbar.shrink {
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.navbar .logo {
+  font-size: 24px;
+  transition: font-size 0.3s ease-in-out;
+}
+
+.navbar.shrink .logo {
+  font-size: 18px;
+}
+
+.nav-links a {
+  font-size: 18px;
+  transition: font-size 0.3s ease-in-out;
+}
+
+.navbar.shrink .nav-links a {
+  font-size: 16px;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  z-index: 3;
+  font-family: "Bona Nova SC", serif;
+}
+.logoo{
+  background: transparent;
+  margin: 0;
+  /* height: 70px; */
+  /* fill: #b9965a; */
+}
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+  color: #CDB48A;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+  font-family: "Bona Nova SC", serif;
+  color: #b9965a;
+}
+
+.navbar .nav-links a:hover {
+  color: #f37e9f;
+  /* Add a hover effect color */
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.signup-btn {
+  display: inline-block;
+  padding: 7px 24px;
+  color: #b9965a;
+  background-color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  /* border-radius: 8px; */
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.signup-btn:hover {
+  background: #d3c7cc;
+  transform: scale(1.05);
+}
+
+.signup-btn:active {
+  transform: scale(0.95);
+}
+/* Main content section (background image) */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+  /* This takes the full viewport height */
+  background: url("https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center fixed;
+  /* Set the background image to be fixed */
+  background-size: cover;
+}
+
+/* Overlay for opacity effect */
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Opacity effect */
+}
+
+/* Content inside overlay */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  gap: 20px;
+}
+
+.company {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: "Noto Serif Display", serif;
+    font-weight: 100;
+    font-style: normal;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.company span {
+    display: inline-block;
+    opacity: 0;
+    transform: scale(1);
+    animation: letterAppear 1s forwards, growShrink 2s 1s forwards;
+}
+
+@keyframes letterAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes growShrink {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Delay each letter */
+.company span:nth-child(1) { animation-delay: 0.1s; }
+.company span:nth-child(2) { animation-delay: 0.2s; }
+.company span:nth-child(3) { animation-delay: 0.3s; }
+.company span:nth-child(4) { animation-delay: 0.4s; }
+.company span:nth-child(5) { animation-delay: 0.5s; }
+.company span:nth-child(6) { animation-delay: 0.6s; }
+.company span:nth-child(7) { animation-delay: 0.7s; }
+.company span:nth-child(8) { animation-delay: 0.8s; }
+.company span:nth-child(9) { animation-delay: 0.9s; }
+.company span:nth-child(10) { animation-delay: 1s; }
+.company span:nth-child(11) { animation-delay: 1.1s; }
+.company span:nth-child(12) { animation-delay: 1.2s; }
+.company span:nth-child(13) { animation-delay: 1.3s; }
+.company span:nth-child(14) { animation-delay: 1.4s; }
+.company span:nth-child(15) { animation-delay: 1.5s; }
+.company span:nth-child(16) { animation-delay: 1.6s; }
+
+.quote {
+    font-style: italic;
+    font-size: larger;
+    margin-top: 20px;
+}
+
+.randtext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rings {
+  height: 80px;
+  margin-top: 30px;
+}
+
+/* Wedding Themes Section */
+.package {
+  display: flex;
+}
+
+.theme-heading1 {
+  /* font-size: 36px; */
+  font-family: "Noto Serif Display", serif;
+  text-align: center;
+  padding: 10px 0;
+  color: rgb(5, 0, 2);
+  font-size: 55px;
+}
+
+.theme-heading2 {
+  font-size: 36px;
+  font-family: "Noto Serif Display", serif;
+  text-align: center;
+  padding: 10px 0;
+  color: #cdb48a !important;
+  font-size: 55px;
+}
+
+/* .para{
+  font-family: "Noto Serif Display", serif;
+  /* text-align: center; */
+/* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  color: #c49c58;
+  width: 60vw;
+}
+.para div{
+  text-align: center;
+} */
+#Wedding-themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  /* Space between theme boxes */
+  justify-content: center;
+  /* Center the boxes horizontally */
+  opacity: 0;
+  transition: opacity 2s ease-in;
+  width: 85vw;
+  /* Set the width to 85% of viewport */
+  max-width: 1200px;
+  /* Set a max-width to avoid boxes stretching too much on large screens */
+  margin: 0 auto;
+  /* Center the section horizontally */
+  padding: 20px 0;
+  /* Optional padding for better spacing */
+  align-self: center;
+  /* Align items vertically in the container */
+}
+
+.themes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  /* Set height to match theme-box */
+}
+
+/* Initially hide all theme boxes */
+.themes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+
+  /* Initial position & scale (off-screen) */
+  transform: translateX(100%) scale(0.9);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* When it becomes visible */
+.themes-container.visible {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+
+
+/* Theme box setup */
+/* Theme Box (Sliding Effect) */
+.theme-box {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  /* Keeps image and text side-by-side */
+  align-items: center;
+  justify-content: space-between;
+  /* border: 2px solid #ddd; */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  opacity: 0;
+  transform: translateX(100%) scale(0.8);
+  /* Start off-screen & smaller */
+  transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.5s ease-out;
+  will-change: transform, opacity;
+}
+
+/* Active theme-box (slides into view) */
+.theme-box.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.theme-box.slide-out {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1.5s ease-in-out, opacity 1s ease-in-out;
+}
+
+.theme-box.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 1.5s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Image Section */
+.theme-media {
+  width: 60%;
+  height: 100%;
+  position: relative;
+}
+
+.theme-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  /* Initially hidden */
+  transition: opacity 1.5s ease-in-out;
+}
+
+/* Ensure the first image is visible */
+.theme-media img:first-child {
+  opacity: 1;
+}
+
+.theme-text {
+  width: 40%;
+  height: 100%;
+  /* Make sure it takes the full height of the theme-box */
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("https://www.lismoynehotel.com/_webedit/uploaded-files/two.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Ensures the image fills the entire text section */
+  background-position: center;
+  /* Centers the image */
+}
+
+
+/* Paragraph Animation */
+.theme-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0;
+  /* Initially hidden */
+  transform: translateY(20px);
+  /* Start lower */
+  transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+}
+
+/* Paragraphs appear when the theme is active */
+.theme-box.active .theme-text p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.theme-text h3 {
+  font-size: 24px;
+  font-family: "Noto Serif Display", serif;
+  font-weight: 700;
+  font-size: 24px !important;
+}
+
+.theme-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Bona Nova SC", serif;
+}
+
+/* For the scroll appearance of the section */
+@keyframes fadeInSection {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#Wedding-themes.visible {
+  animation: fadeInSection 2s forwards;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 1024px) {
+  .theme-box {
+    width: calc(50% - 40px);
+    /* 2 boxes per row on medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .theme-box {
+    width: 100%;
+    /* 1 box per row on small screens */
+  }
+}
+.lgp{
+  width: 100vw;
+  height: 300px;
+  background: #CDB48A;
+  font-family: "Noto Serif Display", serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 70px;
+  margin: 30px 0px 30px 0px;
+  gap: 30px;
+}
+.sericon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.serv {
+  height: 48px;
+  margin-top: 30px;
+}
+
+/* Wedding Themes Section */
+.service {
+  display: flex;
+}
+
+.services-heading1 {
+  /* font-size: 36px; */
+  font-family: "Noto Serif Display", serif;
+  text-align: center;
+  padding: 20px 0;
+  color: rgb(5, 0, 2);
+  font-size: 55px;
+}
+
+.services-heading2 {
+  font-size: 36px;
+  font-family: "Noto Serif Display", serif;
+  text-align: center;
+  padding: 20px 0;
+  color: #cdb48a !important;
+  font-size: 55px;
+}
+
+.servspace {
+  width: 100vw;
+  /* background: #700324;
+  color: #fff;
+  /* background-image: url(../_webedit/uploaded-files/bg.png); */
+  /*background-position: center center;
+  background-size: 100vw auto;
+  background-attachment: fixed;
+  background-repeat: no-repeat; */
+  background-image: url("https://www.lismoynehotel.com/_webedit/uploaded-files/two.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Ensures the image fills the entire text section */
+  background-position: center;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.service-box {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  /* padding: 20px; */
+  /* border-radius: 10px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  /* gap: 20px; */
+}
+
+.service-image {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  /* border-radius: 10px; */
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.service-details {
+  padding: 10px;
+  text-align: center;
+  background-image: url("https://www.lismoynehotel.com/_webedit/uploaded-files/two.png");
+  background-repeat: no-repeat;
+  background-size: fill;
+  /* Ensures the image fills the entire text section */
+  background-position: center;
+  font-family: "Noto Serif Display", serif;
+  color: #CDB48A;
+}
+
+.service-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.service-description {
+  font-size: 16px;
+  color: #666;
+}
+
+#faq {
+  background: url('bg.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #996675;
+  padding: 40px 0;
+  color: white;
+  text-align: center;
+  position: relative;
+  font-family: "Noto Serif Display", serif;
+}
+
+.faq-container {
+  max-width: 80vw;
+  margin: 0 auto; /* Optional: Adds slight overlay for readability */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.faq-heading {
+  font-size: 4em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+  gap: 20px;
+}
+
+.faq-item {
+  padding: 15px;
+  border: 1px solid white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.faq-question {
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+}
+
+.faq-answer {
+  font-size: 13px;
+  margin-top: 10px;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Show answer when FAQ item is clicked */
+.faq-item.active .faq-answer {
+  display: block;
+}
