@@ -1,1 +1,2 @@
 # HTML
+Career Companion empowers B.Tech students for placements by providing a comprehensive collection of previously asked questions across various placement rounds, including aptitude, technical interviews , coding  and general interview questions. It also features an intelligent resume builder that creates tailored resumes based on individual student skills. This platform aims to equip students with essential preparation resources and effective resume creation tools to enhance their placement success.
